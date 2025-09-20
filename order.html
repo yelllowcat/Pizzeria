@@ -3,34 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Contacto</title>
   </head>
   <body>
     <header>
-      <h1>Pizza Margarita</h1>
+      <h1>Ordena ahora</h1>
     </header>
     <nav>
-      <a href="index.html">Inicio</a>
+      <a href="pizza-detail.html">Inicio</a>
       <a href="about.html">Sobre Nosotros</a>
       <a href="contact.html">Contacto</a>
       <a href="order.html">Ordena Ahora</a>
     </nav>
     <main>
-      <textarea name="name" id="name">Pizza Margarita</textarea>
-      <h2>Ingredientes</h2>
-      <ul>
-        <li>Tomate fresco</li>
-        <li>Mozzarella</li>
-        <li>albahaca</li>
-        <li>Aceite de oliva extra virgen</li>
-      </ul>
-      <p><strong>Precio:</strong> $8.00</p>
-      <p>
-        Una pizza clasica con el equilibrio perfecto entre frescura y sabor
-        tradicional.
-      </p>
-      <h2>Te animas a pedirla?</h2>
-      <a href="pizza-detail.html">Haz tu pedido ahora</a>
+      <section>
+        <h2>Menu de pizzas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Ingredientes</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="pizza-margarita.html">Margarita</a></td>
+              <td>Tomate, mozzarella, albahaca</td>
+              <td>$8.00</td>
+            </tr>
+            <tr>
+              <td><a href="pizza-peperoni.html">Pepperoni</a></td>
+              <td>Tomate, mozzarella, pepperoni</td>
+              <td>$9.50</td>
+            </tr>
+            <tr>
+              <td><a href="pizza-vegetariana.html">Vegetariana</a></td>
+              <td>Tomate, mozzarella, champiñones, pimientos, aceitunas</td>
+              <td>$9.00</td>
+            </tr>
+            <tr>
+              <td><a href="pizza-cuatro-quesos.html">Cuartro Quesos</a></td>
+              <td>Mozzarella, gorgonzola, parmesano, provolone</td>
+              <td>$10.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>Formulario de pedido</h2>
+        <form id="dadada">
+          <label for="nombre">Nombre:</label>
+          <input type="text" name="nombre" id="nombre" />
+          <label for="direccion">Direccion:</label>
+          <input type="text" name="direccion" id="direccion" />
+          <fieldset>
+            <legend>Tamano de la pizza</legend>
+            <input type="radio" name="tamano" id="pequena" />
+            <label for="pequena">Pequena</label>
+            <input type="radio" name="tamano" id="mediana" />
+            <label for="mediana">Mediana</label>
+            <input type="radio" name="tamano" id="grande" />
+            <label for="grande">Grande</label>
+          </fieldset>
+          <fieldset>
+            <legend>Ingredientes adicionales</legend>
+            <input type="checkbox" name="adicionales" id="queso" />
+            <label for="queso">Queso extra</label>
+
+            <input type="checkbox" name="adicionales" id="pepperoni" />
+            <label for="pepperoni">Pepperoni</label>
+
+            <input type="checkbox" name="adicionales" id="champiñones" />
+            <label for="champiñones">Champiñones</label>
+
+            <input type="checkbox" name="adicionales" id="aceitunas" />
+            <label for="aceitunas">Aceitunas</label>
+          </fieldset>
+          <label for="cantidad">Cantidad:</label>
+          <input type="number" name="cantidad" id="cantidad" />
+          <label for="comentarios">Comentarios adicionales:</label>
+          <textarea name="comentarios" id="comentarios"></textarea>
+          <input type="submit" form="dadada" />
+        </form>
+      </section>
     </main>
     <footer>
       <p>@ 2025 Pizzeria El Buen Sabor</p>
